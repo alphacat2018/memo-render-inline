@@ -1,0 +1,63 @@
+{
+    "name": "memo-render-inline",
+    "version": "1.0.0",
+    "description": "Memoize inline objects and functions of a React class Component",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "scripts": {
+        "build": "npm run build:types && npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+        "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --extensions \".ts,.tsx,.js\"",
+        "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --extensions \".ts,.tsx,.js\"",
+        "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/memo-render-inline.js",
+        "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=production rollup -c -o dist/memo-render-inline.min.js",
+        "build:types": "tsc --emitDeclarationOnly",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "react",
+        "component",
+        "render",
+        "inline",
+        "object",
+        "style",
+        "function",
+        "listener",
+        "callback"
+    ],
+    "author": "alphacat",
+    "homepage": "https://github.com/alphacat2018/memo-render-inline.git",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alphacat2018/memo-render-inline.git"
+    },
+    "license": "ISC",
+    "files": [
+        "dist",
+        "lib",
+        "src",
+        "es"
+    ],
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/plugin-transform-runtime": "^7.9.0",
+        "@babel/preset-env": "^7.9.5",
+        "@babel/preset-typescript": "^7.9.0",
+        "@types/react": "^16.9.34",
+        "cross-env": "^7.0.2",
+        "react": "^16.13.1",
+        "rollup": "^2.6.1",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-terser": "^5.3.0",
+        "typescript": "^3.8.3"
+    },
+    "peerDependencies": {
+        "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0"
+    },
+    "dependencies": {
+        "@babel/runtime-corejs3": "^7.9.2",
+        "invariant": "^2.2.4"
+    }
+}
