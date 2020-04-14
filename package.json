@@ -1,6 +1,6 @@
 {
     "name": "memo-render-inline",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Memoize inline objects and functions of a React class Component",
     "main": "lib/index.js",
     "module": "es/index.js",

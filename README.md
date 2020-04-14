@@ -20,6 +20,7 @@ npm install --save memo-render-inline
 # Usage
 
 ```jsx
+import memoComponent from "memo-render-inline";
 
 class MyComponent extends Component {
     state = {
